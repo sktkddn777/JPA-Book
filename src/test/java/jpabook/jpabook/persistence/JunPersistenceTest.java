@@ -17,7 +17,7 @@ import javax.persistence.PersistenceUnit;
 public class JunPersistenceTest {
 
     @PersistenceUnit
-    private EntityManagerFactory factory;
+    EntityManagerFactory factory;
 
 
     @Test
