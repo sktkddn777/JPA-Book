@@ -2,7 +2,7 @@ package jpabook.jpabook.domain;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 //@SequenceGenerator(
 //        name = "BOARD_SEQ_GENERATOR",
 //        sequenceName = "BOARD_SEQ",
