@@ -1,5 +1,7 @@
 package jpabook.jpabook.model.entity;
 
+import jpabook.jpabook.model.entity.item.Item;
+
 import javax.persistence.*;
 
 @Entity
