@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static javax.persistence.CascadeType.*;
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Table(name = "ORDERS")
 @Data
@@ -17,14 +20,14 @@ public class Order extends BaseEntity{
     @Column(name = "ORDER_ID")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = LAZY)
     @JoinColumn (name = "MEMBER_ID")
     private Member member;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = ALL)
     private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
-    @OneToOne
+    @OneToOne(cascade = ALL, fetch = LAZY) // cascade 는 부모를 영속 상태로 만들때 자식도 영속 상태로해주는 편리함 제공
     @JoinColumn(name = "DELIVERY_ID")
     private Delivery delivery;
 
