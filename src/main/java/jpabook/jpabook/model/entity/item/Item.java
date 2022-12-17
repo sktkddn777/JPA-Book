@@ -1,5 +1,6 @@
 package jpabook.jpabook.model.entity.item;
 
+import jpabook.jpabook.model.entity.BaseEntity;
 import jpabook.jpabook.model.entity.CategoryItem;
 import lombok.Data;
 
@@ -13,7 +14,7 @@ import static javax.persistence.InheritanceType.SINGLE_TABLE;
 @Inheritance(strategy = SINGLE_TABLE)
 @DiscriminatorColumn
 @Data
-public abstract class Item {
+public abstract class Item extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "ITEM_ID")

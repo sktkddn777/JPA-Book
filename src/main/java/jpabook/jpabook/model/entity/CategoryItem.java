@@ -5,7 +5,7 @@ import jpabook.jpabook.model.entity.item.Item;
 import javax.persistence.*;
 
 @Entity
-public class CategoryItem {
+public class CategoryItem extends BaseEntity{
 
     @Id @GeneratedValue
     @Column(name = "CATEGORY_ITME_ID")

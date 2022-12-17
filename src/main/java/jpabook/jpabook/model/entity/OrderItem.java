@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "ORDER_ITEM")
 @Data
-public class OrderItem {
+public class OrderItem extends BaseEntity{
 
     @Id @GeneratedValue
     @Column(name = "ORDER_ITEM_ID")
